@@ -6,7 +6,8 @@ public class WhileLoop {
 	{
 	
 	int a=1; // initialization
-	while(a<=10) // condition
+	
+	while(a<10) // condition
 	{
 		System.out.println(a);
 		a++; // Increment or Decrement

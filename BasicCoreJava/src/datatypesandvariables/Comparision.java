@@ -14,7 +14,7 @@ public class Comparision {
 		{
 			System.out.println("A is greater than B");
 		}else {
-			System.out.println("B is equal to A");
+			System.out.println("A is equal to B");
 		}
 		
 		//<
@@ -22,7 +22,7 @@ public class Comparision {
 		{
 			System.out.println("A is less than B");
 		}else {
-			System.out.println("B is equal to A");
+			System.out.println("A is equal to B");
 		}
 		
 		//>=

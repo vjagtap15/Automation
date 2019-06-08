@@ -4,7 +4,7 @@ public class LogicalOperators {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int a=10;
+		int a=31;
 		int b=20;
 		int c=30;
 		
