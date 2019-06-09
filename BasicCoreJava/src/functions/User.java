@@ -16,7 +16,11 @@ public class User {
 		//car2.wheels=4;
 		car2.driving();
 
-		
+		Car car3 = new Car();
+		car3.name="Swift";
+		car3.colour="Black";
+		//car3.wheels=4;
+		car3.driving();		
 	}
 
 }
