@@ -8,7 +8,7 @@ public class ExceptionHandelingClass2 {
 
 		try {
 			// Step 1
-			obj.test(10, 0);
+			obj.test(10, 10);
 		} catch (Exception e) {
 			System.out.println("Fail: " + e.getMessage());
 		}
