@@ -2,7 +2,6 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="C:/Users/DELL/Downloads/selenium-server-standalone-3.11.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/DELL/Downloads/Selenium Software/poi-3.17-20190428T055312Z-001/poi-3.17/poi-3.17.jar"/>
 	<classpathentry kind="lib" path="C:/Users/DELL/Downloads/Selenium Software/poi-3.17-20190428T055312Z-001/poi-3.17/poi-examples-3.17.jar"/>
 	<classpathentry kind="lib" path="C:/Users/DELL/Downloads/Selenium Software/poi-3.17-20190428T055312Z-001/poi-3.17/poi-excelant-3.17.jar"/>
@@ -16,5 +15,19 @@
 	<classpathentry kind="lib" path="C:/Users/DELL/Downloads/Selenium Software/poi-3.17-20190428T055312Z-001/poi-3.17/lib/log4j-1.2.17.jar"/>
 	<classpathentry kind="lib" path="C:/Users/DELL/Downloads/Selenium Software/poi-3.17-20190428T055312Z-001/poi-3.17/ooxml-lib/curvesapi-1.04.jar"/>
 	<classpathentry kind="lib" path="C:/Users/DELL/Downloads/Selenium Software/poi-3.17-20190428T055312Z-001/poi-3.17/ooxml-lib/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/SE_26052019/JarFiles/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="C:/SE_26052019/JarFiles/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="C:/SE_26052019/JarFiles/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/SE_26052019/JarFiles/curvesapi-1.04.jar"/>
+	<classpathentry kind="lib" path="C:/SE_26052019/JarFiles/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="C:/SE_26052019/JarFiles/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="C:/SE_26052019/JarFiles/poi-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/SE_26052019/JarFiles/poi-examples-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/SE_26052019/JarFiles/poi-excelant-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/SE_26052019/JarFiles/poi-ooxml-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/SE_26052019/JarFiles/poi-ooxml-schemas-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/SE_26052019/JarFiles/poi-scratchpad-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/SE_26052019/JarFiles/selenium-server-standalone-3.141.59.jar"/>
+	<classpathentry kind="lib" path="C:/SE_26052019/JarFiles/xmlbeans-2.6.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
