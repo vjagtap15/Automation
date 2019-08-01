@@ -11,7 +11,7 @@ public class ApplicationLibraries {
 	public WebDriver launchBrowser()
 
 	{
-		System.setProperty("webdriver.chrome.driver", "Config.chromedriver");
+		System.setProperty("webdriver.chrome.driver", Config.chromedriver);
 		ChromeDriver dr = new ChromeDriver();
 		dr.manage().window().maximize();
 		dr.get(Config.appurl);
@@ -21,7 +21,7 @@ public class ApplicationLibraries {
 	public WebDriver launchBrowser(String url)
 
 	{
-		System.setProperty("webdriver.chrome.driver", "Config.chromedriver");
+		System.setProperty("webdriver.chrome.driver", Config.chromedriver);
 		ChromeOptions op = new ChromeOptions();
 		op.addArguments("--disable-infobars");
 		op.addArguments("--start-maximized");
