@@ -17,44 +17,32 @@ import Utilities.Xls_Reader;
 
 public class TestScript1 
 {
-	SoftAssert asser;
-	
-	@BeforeMethod
-	public void setup()
-	{
-		asser = new SoftAssert();
-		
-	}
-	
-	@AfterMethod
-	public void teardown()
-	{
-		asser.assertAll();
-	}
-	
+	/*
+	 * SoftAssert asser;
+	 * 
+	 * @BeforeMethod public void setup() { asser = new SoftAssert();
+	 * 
+	 * }
+	 * 
+	 * @AfterMethod public void teardown() { asser.assertAll(); }
+	 */
 	@Test(dataProvider="getdata2")
 	public void loginTest(String Username, String Password, String title)
 	{
 		//Launch Browser
 		  ApplicationLibraries lib = new ApplicationLibraries();
-		  
 		  WebDriver dr=lib.launchBrowser();
-		  
 		  HomePage page1 = new HomePage(dr);
-		  
 		  page1.login(Username, Password);
+		  //asser.assertEquals(dr.getTitle(), title);
+		  Assert.assertEquals(dr.getTitle(), title);
+		  dr.quit();
 		  
 		/*
 		 * System.out.println(title); System.out.println(dr.getTitle());
 		 * System.out.println("******************");
 		 */
-		  
-		  //Assert.assertEquals(dr.getTitle(), title); ---- Hard Assertion
-		  
-		  asser.assertEquals(dr.getTitle(), title);
-		  
-		  dr.quit();
-		 
+		  //Assert.assertEquals(dr.getTitle(), title); ---- Hard Assertion		 
 	}
 	
 	@DataProvider
@@ -70,11 +58,10 @@ public class TestScript1
 		{
 			for(int c=1; c<=cols; c++)
 			{
-				data[r-2][c-1]=xl.getCellData("TestData", r, c);
+				data[r-2][c-1]=xl.getCellData("TestData", r, c);				
 			}
 		}
 		return data;
 	}
-
 
 }

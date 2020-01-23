@@ -3,13 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestScripts.TestScript1">
+      <class name="TestScripts.TestScript2">
         <methods>
-          <include name="teardown"/>
-          <include name="setup"/>
-          <include name="loginTest"/>
+          <include name="OneWayFlightBkg" invocation-numbers="0 1"/>
         </methods>
-      </class> <!-- TestScripts.TestScript1 -->
+      </class> <!-- TestScripts.TestScript2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

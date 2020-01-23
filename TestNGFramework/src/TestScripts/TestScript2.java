@@ -13,50 +13,66 @@ import Pages.FlightFinder;
 import Pages.HomePage;
 import Utilities.Xls_Reader;
 
-public class TestScript2 
-{
-	@Test(dataProvider="getdata2")
-	public void OneWayFlightBkg(String Username, String Password, String DepartingFrom, String ServiceClass)
-	{
-		//Launch Browser
-		  ApplicationLibraries lib = new ApplicationLibraries();
-		  WebDriver dr=lib.launchBrowser();
-		  HomePage page1 = new HomePage(dr);
-		  page1.login(Username, Password);
-		  
-		  //Book Flight.
-		  FlightFinder flightfinderpage = new FlightFinder(dr);
-		  flightfinderpage.clickOneWay();
-		  flightfinderpage.clickContinuebtn();
-		  
-		/*
-		 * System.out.println(title); System.out.println(dr.getTitle());
-		 * System.out.println("******************");
-		 */
-		  
-		  //Assert.assertEquals(dr.getTitle(), title); ---- Hard Assertion
-		  SoftAssert asser = new SoftAssert();
-		  //asser.assertEquals(dr.getTitle(), title);
-		  asser.assertAll();
-		  
-		  dr.quit();
-		 
+/*
+ * 1. Launch the browser
+ * 2. Navigate to the application
+ * 3. Login in the application
+ * 4. Enter details on flight finder
+ * 
+ */
+
+public class TestScript2 {
+	WebDriver dr;
+	
+
+	@Test(priority=0)
+	public void LoginTest() {
+		// Launch Browser
+		ApplicationLibraries lib = new ApplicationLibraries();
+
+		dr = lib.launchBrowser();
+		
+	}
+
+	@Test(priority=1, dataProvider = "getdata2")
+	public void OneWayFlightBkg(String DepartingFrom, String ServiceClass) throws InterruptedException {
+		
+		dr.get(Config.appurl);
+		
+		HomePage page1 = new HomePage(dr);
+		page1.login(Config.username, Config.password);
+
+		// Book Flight.
+		FlightFinder flightfinderpage = new FlightFinder(dr);
+		flightfinderpage.clickOneWay();
+		
+		//Select City
+		flightfinderpage.selectDepartingFrom(DepartingFrom);
+		
+		Thread.sleep(5000);
+		
+		//Select Service Class
+		flightfinderpage.selectServiceClass(ServiceClass);
+		
+		Thread.sleep(5000);
+		
+		flightfinderpage.clickContinuebtn();
+		
+
+		
 	}
 
 	@DataProvider
-	public String[][] getdata2() throws IOException 
-	{
+	public String[][] getdata2() throws IOException {
 		Xls_Reader xl = new Xls_Reader(Config.testdata);
-		int rows=xl.getrowcount("OnewayFlight");
-		int cols=xl.getColumncount("OnewayFlight");
-		
-		String[][] data = new String [rows-1][cols];
-		
-		for (int r=2; r<=rows; r++)
-		{
-			for(int c=1; c<=cols; c++)
-			{
-				data[r-2][c-1]=xl.getCellData("OnewayFlight", r, c);
+		int rows = xl.getrowcount("OnewayFlight");
+		int cols = xl.getColumncount("OnewayFlight");
+
+		String[][] data = new String[rows - 1][cols];
+
+		for (int r = 2; r <= rows; r++) {
+			for (int c = 1; c <= cols; c++) {
+				data[r - 2][c - 1] = xl.getCellData("OnewayFlight", r, c);
 			}
 		}
 		return data;

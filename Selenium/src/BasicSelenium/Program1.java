@@ -15,7 +15,6 @@ public class Program1 {
 
 	public static void main(String[] args) throws IOException {
 		System.setProperty("webdriver.chrome.driver", "C:\\SE_26052019\\Drivers\\chromedriver.exe");
-
 		ChromeDriver dr = new ChromeDriver();
 		dr.manage().window().maximize();
 		dr.get("http://www.newtours.demoaut.com/");

@@ -1,5 +1,6 @@
 package Pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class SelectFlight 
@@ -10,4 +11,6 @@ public class SelectFlight
 	{
 		this.dr=dr;
 	}
+	
+	By continuebtn=By.name("reserveFlights");
 }
